@@ -1,0 +1,98 @@
+#include <string>
+#include <Windows.h>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    string newWord[11];
+    int newNum;
+    string newW, yep;
+    
+
+    cout << "Cumlenizi tek tek kelime ve sonunda '.' olucak sekilde yazin:" << endl;
+
+
+    for (int i = 0; i < 11; i++)
+    {
+        cout << "--> ";
+        cin >> newWord[i];
+        if (newWord[i] == ".")
+        {
+            break;
+        }
+        else if (newWord[i] == "...")
+        {
+            break;
+        }
+        else if (newWord[i] == "!")
+        {
+            break;
+        }
+        else if (newWord[i] == "?")
+        {
+            break;
+        }
+    }
+    cout << "Cumleniz --> ";
+
+    for (int j = 0; j < 11; j++)
+    {
+        cout << newWord[j] << " ";
+    }
+
+
+
+    cout << endl << endl << "Degistirmek istediginiz kelimenin sirasini yazin (1. = 1; 2. = 2 vb.): ";
+    cin >> newNum;
+    cout << endl << "Sectiginiz kelime --> " << newWord[newNum -1 ] ;
+    cout << endl << endl << "Degistirmek istiyor musunuz?: ";
+    cin >> yep;
+
+    if (yep == "evet")
+    {
+        cout << endl << "Yeni kelimenizi secin(1. = 1; 2. = 2 vb.): ";
+        cin >> newNum;
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+    else if (yep == "hayir")
+    {
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+    else if (yep == "yes")
+    {
+        cout << endl << "Yeni kelimenizi secin(1. = 1; 2. = 2 vb.): ";
+        cin >> newNum;
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+    else if (yep == "no")
+    {
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+    else if (yep == "y")
+    {
+        cout << endl << "Yeni kelimenizi secin(1. = 1; 2. = 2 vb.): ";
+        cin >> newNum;
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+    else if (yep == "n")
+    {
+        cout << endl << "Yeni kelimenizi girin: ";
+        cin >> newW;
+    }
+   
+    newWord[newNum - 1] = newW;
+
+    cout << endl << "";
+
+    for (int k = 0; k < 11; k++)
+    {
+        cout  << newWord[k] << " ";
+    }
+}
